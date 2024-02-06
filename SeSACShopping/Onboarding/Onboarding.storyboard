@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MR9-1D-vue">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="Y6W-OH-hqX" customClass="OnboardingViewController" customModule="SeSACShopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sesacShopping" translatesAutoresizingMaskIntoConstraints="NO" id="lJj-oX-Gfk">
+                                <rect key="frame" x="80" y="153" width="233" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lJj-oX-Gfk" secondAttribute="height" multiplier="313:128" constant="3" id="RMW-xD-Utn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="6pQ-tG-she">
+                                <rect key="frame" x="40" y="269.66666666666669" width="313" height="313.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6pQ-tG-she" secondAttribute="height" multiplier="1:1" id="0hj-yb-4dI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEY-jJ-uqa">
+                                <rect key="frame" x="20" y="718" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rd6-2l-86x"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lJj-oX-Gfk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="Bxi-oc-OJP"/>
+                            <constraint firstItem="6pQ-tG-she" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="EpV-aN-5uv"/>
+                            <constraint firstItem="6pQ-tG-she" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="V9L-Km-453"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lJj-oX-Gfk" secondAttribute="trailing" constant="80" id="bz3-X7-7PW"/>
+                            <constraint firstItem="lJj-oX-Gfk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="80" id="en4-6k-aEe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="MEY-jJ-uqa" secondAttribute="bottom" constant="50" id="g9I-Vz-jqf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6pQ-tG-she" secondAttribute="trailing" constant="40" id="jSf-zc-NmP"/>
+                            <constraint firstItem="MEY-jJ-uqa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="lYx-QD-Dzm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MEY-jJ-uqa" secondAttribute="trailing" constant="20" id="mIl-LF-yx3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ePk-Vv-sWu"/>
+                    <connections>
+                        <outlet property="logoImageView" destination="lJj-oX-Gfk" id="BRS-nW-XkV"/>
+                        <outlet property="onboardingImageView" destination="6pQ-tG-she" id="kCD-nz-xjL"/>
+                        <outlet property="startButton" destination="MEY-jJ-uqa" id="bZp-YD-mh6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983.96946564885491" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kRb-0a-CeJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MR9-1D-vue" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vjx-f1-xUX">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="47P-kg-vXY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gra-mw-kqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="onboarding" width="320" height="320"/>
+        <image name="sesacShopping" width="210.33332824707031" height="94"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="93" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="SeSACShopping" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="384" height="93"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bQE-21-aMg">
+                        <rect key="frame" x="10" y="28" width="37.333333333333336" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="bQE-21-aMg" secondAttribute="height" multiplier="1:1" id="Ehy-5i-IZJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeC-7b-ACm">
+                        <rect key="frame" x="67.333333333333329" y="37.666666666666664" width="41.333333333333329" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="EM6-OW-ybL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZw-wy-v1q">
+                        <rect key="frame" x="346" y="32.666666666666664" width="28" height="27.666666666666664"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="pZw-wy-v1q" secondAttribute="height" multiplier="1:1" id="kv2-LD-1EL"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pZw-wy-v1q" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AeQ-MI-AuE"/>
+                    <constraint firstItem="bQE-21-aMg" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.4" id="M0L-Ww-ArB"/>
+                    <constraint firstItem="pZw-wy-v1q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GeC-7b-ACm" secondAttribute="trailing" constant="10" id="Us3-kx-Fah"/>
+                    <constraint firstItem="bQE-21-aMg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="cjR-6b-fHh"/>
+                    <constraint firstAttribute="trailing" secondItem="pZw-wy-v1q" secondAttribute="trailing" constant="10" id="fGD-MC-DYU"/>
+                    <constraint firstItem="bQE-21-aMg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="loj-Xf-EiJ"/>
+                    <constraint firstItem="GeC-7b-ACm" firstAttribute="leading" secondItem="bQE-21-aMg" secondAttribute="trailing" constant="20" id="n9p-Re-ljb"/>
+                    <constraint firstItem="pZw-wy-v1q" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.3" id="tGL-oj-eZe"/>
+                    <constraint firstItem="GeC-7b-ACm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vfi-kr-mKj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="deleteButton" destination="pZw-wy-v1q" id="qHZ-WC-HvJ"/>
+                <outlet property="recentSearchLabel" destination="GeC-7b-ACm" id="6Nx-Xb-l5t"/>
+                <outlet property="searchIconImageView" destination="bQE-21-aMg" id="4pb-rq-kzZ"/>
+            </connections>
+            <point key="canvasLocation" x="187.78625954198472" y="36.971830985915496"/>
+        </tableViewCell>
+    </objects>
+</document>

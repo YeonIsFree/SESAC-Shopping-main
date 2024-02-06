@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="SeSACShopping" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SQn-dQ-Xge">
+                                <rect key="frame" x="147.33333333333334" y="99" width="98.333333333333343" height="98.333333333333314"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SQn-dQ-Xge" secondAttribute="height" multiplier="1:1" id="Zga-gl-N6o"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IAV-d4-6QP" appends="YES" id="Mwy-A4-XTn"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8vp-4D-zSd">
+                                <rect key="frame" x="30" y="227.33333333333334" width="333" height="50.000000000000028"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bTJ-hT-eTL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldValueChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="vly-kF-pg9"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ci8-Fu-zHM">
+                                <rect key="frame" x="40" y="292.33333333333331" width="313" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="Kph-7l-W3s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Df-xw-bSW">
+                                <rect key="frame" x="30" y="333.33333333333331" width="333" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gvc-HU-n5w"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ph5-F5-BRx"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MOY-6r-QWb">
+                                <rect key="frame" x="221" y="172.66666666666666" width="24.666666666666657" height="24.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MOY-6r-QWb" secondAttribute="height" multiplier="1:1" id="1UN-MR-BGV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8vp-4D-zSd" secondAttribute="trailing" constant="30" id="6iL-ha-vZ6"/>
+                            <constraint firstItem="Ci8-Fu-zHM" firstAttribute="leading" secondItem="8vp-4D-zSd" secondAttribute="leading" constant="10" id="8UI-j2-nwf"/>
+                            <constraint firstItem="8vp-4D-zSd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="9ag-9T-OLs"/>
+                            <constraint firstItem="MOY-6r-QWb" firstAttribute="trailing" secondItem="SQn-dQ-Xge" secondAttribute="trailing" id="9ih-vH-LuT"/>
+                            <constraint firstItem="7Df-xw-bSW" firstAttribute="trailing" secondItem="8vp-4D-zSd" secondAttribute="trailing" id="Aco-vg-ZkD"/>
+                            <constraint firstItem="Ci8-Fu-zHM" firstAttribute="top" secondItem="8vp-4D-zSd" secondAttribute="bottom" constant="15" id="Gj0-Ph-dcT"/>
+                            <constraint firstItem="MOY-6r-QWb" firstAttribute="bottom" secondItem="SQn-dQ-Xge" secondAttribute="bottom" id="NXX-qL-QMn"/>
+                            <constraint firstItem="Ci8-Fu-zHM" firstAttribute="trailing" secondItem="8vp-4D-zSd" secondAttribute="trailing" constant="-10" id="T7t-Cd-hmJ"/>
+                            <constraint firstItem="8vp-4D-zSd" firstAttribute="top" secondItem="SQn-dQ-Xge" secondAttribute="bottom" constant="30" id="TIb-zp-RCj"/>
+                            <constraint firstItem="SQn-dQ-Xge" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="WBj-ix-hA9"/>
+                            <constraint firstItem="SQn-dQ-Xge" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aAq-Uy-IzH"/>
+                            <constraint firstItem="7Df-xw-bSW" firstAttribute="leading" secondItem="8vp-4D-zSd" secondAttribute="leading" id="cpe-t6-Ain"/>
+                            <constraint firstItem="7Df-xw-bSW" firstAttribute="top" secondItem="Ci8-Fu-zHM" secondAttribute="bottom" constant="23" id="gC4-te-aDF"/>
+                            <constraint firstItem="SQn-dQ-Xge" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.25" id="maF-oz-cvi"/>
+                            <constraint firstItem="MOY-6r-QWb" firstAttribute="height" secondItem="SQn-dQ-Xge" secondAttribute="height" multiplier="0.25" id="zJJ-2G-biW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraIconImageView" destination="MOY-6r-QWb" id="biZ-X4-DSF"/>
+                        <outlet property="doneButton" destination="7Df-xw-bSW" id="Qzx-es-Vo3"/>
+                        <outlet property="nicknameTextField" destination="8vp-4D-zSd" id="GiJ-cU-wkU"/>
+                        <outlet property="profileImageView" destination="SQn-dQ-Xge" id="We2-5i-BLG"/>
+                        <outlet property="validatationLabel" destination="Ci8-Fu-zHM" id="Ud5-aM-Sfl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="IAV-d4-6QP">
+                    <connections>
+                        <action selector="profileImageTapped:" destination="Y6W-OH-hqX" id="0Nn-2d-FWl"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
