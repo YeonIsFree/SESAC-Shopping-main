@@ -133,7 +133,7 @@
 				8CE067442B59115E00B8F9F6 /* Onboarding */,
 				8CE067552B59436600B8F9F6 /* Profile */,
 				8CE0676A2B5A9FBB00B8F9F6 /* SettingProfile */,
-				8CE067692B5A932300B8F9F6 /* Main */,
+				8CE067692B5A932300B8F9F6 /* Home */,
 				8CE0677A2B5CDF8B00B8F9F6 /* SearchResult */,
 				8CE067902B5D48CB00B8F9F6 /* Detail */,
 				8CE0673B2B590C2A00B8F9F6 /* LaunchScreen.storyboard */,
@@ -196,13 +196,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		8CE067692B5A932300B8F9F6 /* Main */ = {
+		8CE067692B5A932300B8F9F6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8CE0679E2B5D7D6700B8F9F6 /* MainSearch */,
+				8CE0679E2B5D7D6700B8F9F6 /* Search */,
 				8CE0679B2B5D4E0800B8F9F6 /* Config */,
 			);
-			path = Main;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		8CE0676A2B5A9FBB00B8F9F6 /* SettingProfile */ = {
@@ -245,14 +245,14 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		8CE0679E2B5D7D6700B8F9F6 /* MainSearch */ = {
+		8CE0679E2B5D7D6700B8F9F6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				8CE067A92B5E598C00B8F9F6 /* Cell */,
 				8CE067362B590C2900B8F9F6 /* Main.storyboard */,
 				8CE067342B590C2900B8F9F6 /* HomeViewController.swift */,
 			);
-			path = MainSearch;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		8CE067A92B5E598C00B8F9F6 /* Cell */ = {

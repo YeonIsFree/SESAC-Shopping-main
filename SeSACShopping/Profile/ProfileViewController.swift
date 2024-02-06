@@ -43,8 +43,24 @@ class ProfileViewController: UIViewController {
      // MARK: - IBAction Methods
     
     @IBAction func textFieldValueChanged(_ sender: UITextField) {
-        nicknameValidate(sender.text!)
-        doneButton.isHidden = isValidUserName ? false : true
+        do {
+            try validateNickname(sender.text!)
+            validatationLabel.text = "사용할 수 있는 닉네임이에요"
+            doneButton.isHidden = false
+        } catch {
+            doneButton.isHidden = true
+            
+            switch error {
+            case nicknameValidationError.invalidLength:
+                validatationLabel.text = nicknameValidationError.invalidLength.alert
+            case nicknameValidationError.containSpecialChar:
+                validatationLabel.text = nicknameValidationError.containSpecialChar.alert
+            case nicknameValidationError.containNumber:
+                validatationLabel.text = nicknameValidationError.containNumber.alert
+            default:
+                validatationLabel.text = "사용할 수 없는 닉네임이에요"
+            }
+        }
     }
     
     @IBAction func profileImageTapped(_ sender: UITapGestureRecognizer) {
@@ -68,34 +84,43 @@ class ProfileViewController: UIViewController {
     }
 }
 
- // MARK: - nickname Validation
+ // MARK: - nickname Validation Methods
 
 extension ProfileViewController {
-    func nicknameValidate(_ text: String) {
-        if !isValidLength(text) {
-            validatationLabel.text = "2글자 이상 10글자 미만으로 설정해주세요"
-            isValidUserName = false
-            return
-        }
+    // 에러 종류들을 미리 정의
+    enum nicknameValidationError: Error {
+        case invalidLength
+        case containSpecialChar
+        case containNumber
         
-        if isContainSpecialChar(text) {
-            validatationLabel.text = "닉네임에 @, #, $, %는 포함할 수 없어요"
-            isValidUserName = false
-            return
+        var alert: String {
+            switch self {
+            case .invalidLength:
+                return "2글자 이상 10글자 미만으로 설정해주세요"
+            case .containSpecialChar:
+                return "닉네임에 @, #, $, %는 포함할 수 없어요"
+            case .containNumber:
+                return "닉네임에 숫자는 포함할 수 없어요"
+            }
         }
-        
-        if isContainNumber(text) {
-            validatationLabel.text = "닉네임에 숫자는 포함할 수 없어요"
-            isValidUserName = false
-            return
-        }
-        
-        validatationLabel.text = "사용할 수 있는 닉네임이에요"
-        isValidUserName = true
     }
-
-    func isValidLength(_ text: String) -> Bool {
-        return (text.count >= 2 && text.count < 10) ? true : false
+    
+    // 에러가 발생할 수 있는 함수에 대한 정의
+    func validateNickname(_ text: String) throws {
+        if isInvalidLength(text) {
+            throw nicknameValidationError.invalidLength
+        } else if isContainSpecialChar(text) {
+            throw nicknameValidationError.containSpecialChar
+        } else if isContainNumber(text) {
+            throw nicknameValidationError.containNumber
+        } else {
+            return
+        }
+    }
+    
+    // 유효하지 않은 길이의 문자열이면 true를 반환
+    func isInvalidLength(_ text: String) -> Bool {
+        return (text.count >= 2 && text.count < 10) ? false : true
     }
     
     // 특수문자를 포함하면 true를 반환

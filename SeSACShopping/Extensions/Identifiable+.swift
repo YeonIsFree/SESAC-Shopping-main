@@ -5,7 +5,7 @@
 //  Created by Seryun Chun on 2024/01/18.
 //
 
-import Foundation
+import UIKit
 
 protocol Identifiable {
     static var identifier: String { get }
@@ -17,4 +17,4 @@ extension Identifiable {
     }
 }
 
-extension NSObject: Identifiable { } 
+extension NSObject: Identifiable { }

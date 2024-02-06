@@ -70,7 +70,6 @@ class SearchResultViewController: UIViewController {
         relevantSortButton.tintColor = .black
         relevantSortButton.backgroundColor = .white
         
-        
         // Button Action
         relevantSortButton.addTarget(self, action: #selector(sortButtonTapped), for: .touchUpInside)
         dateSortButton.addTarget(self, action: #selector(sortButtonTapped), for: .touchUpInside)
